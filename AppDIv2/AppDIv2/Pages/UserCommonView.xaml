@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDIv2.Pages.UserCommonView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtFirstName" HeightRequest="40" Placeholder="Enter the" Text="{Binding FirstName}"/>
+            <Entry x:Name="txtLastName" HeightRequest="40" Placeholder="Enter the" Text="{Binding LastName}"/>
+            <Entry x:Name="txtEmail" HeightRequest="40" Placeholder="Enter the" Text="{Binding UserEmail}"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtPhoneNumber" HeightRequest="40" Placeholder="Enter the" BackgroundColor="White" HorizontalOptions="FillAndExpand" Text="{Binding PhoneNumber}"/>
+                <Entry x:Name="txtAge" HeightRequest="40" Placeholder="Enter the" BackgroundColor="White" HorizontalOptions="FillAndExpand" Text="{Binding Age}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

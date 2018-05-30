@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:AppDIv2.Pages"
+             x:Class="AppDIv2.Pages.AddUserPage">
+    <StackLayout>
+        <StackLayout>
+            <local:UserCommonView/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button 
+                x:Name="btnAddUser" 
+                Text="{Binding AddNewUserCommand}" 
+                HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout>
+            <Label 
+                Text="View all contanct" 
+                HorizontalOptions="EndAndExpand" 
+                IsEnabled="{Binding IsViewAll}" 
+                TextColor="Azure">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ViewAllContactsCommand}" NumberOfTapsRequired="1"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
